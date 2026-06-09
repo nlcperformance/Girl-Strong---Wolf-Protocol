@@ -23,7 +23,11 @@
             .no-print { display: none !important; }
             .print-container { width: 100%; height: 100%; color: black !important; }
             .print-container * { border-color: black !important; }
-            .print-box { width: 14px; height: 14px; border: 2px solid #000; display: inline-block; background: white; }
+            
+            /* High Contrast Print Overrides */
+            .print-bg-white { background-color: white !important; }
+            .print-border-black { border-color: black !important; }
+            .print-text-black { color: black !important; }
         }
 
         body { font-family: 'Inter', sans-serif; background-color: #f3f4f6; }
@@ -31,11 +35,6 @@
         .brand-red { background-color: #D00000; }
         .text-brand-red { color: #D00000; }
         .border-brand-red { border-color: #D00000; }
-        
-        .print-box {
-            width: 14px; height: 14px; border: 1.5px solid #4B5563;
-            display: inline-block; background: white;
-        }
     </style>
 </head>
 <body>
@@ -69,7 +68,6 @@
                 title: "ISO PRIMER & STRENGTH",
                 subtitle: "Isometrics to disable the Golgi Tendon Organ, followed by uninhibited Absolute Force.",
                 type: "standard",
-                showMatrix: true,
                 exercises: [
                     { name: "A1. Extreme Iso Lunge", sets: "1", reps: "60-90s/leg", rpe: "9", rest: "None", notes: "Primer: Active pull! Front hamstring pulls back, rear big toe engaged." },
                     { name: "A2. Extreme Iso Push-Up", sets: "1", reps: "60s", rpe: "8", rest: "90s", notes: "Primer: Actively pull hands into floor. Pectoral resilience." },
@@ -86,7 +84,6 @@
                 title: "DYNAMIC ECCENTRICS",
                 subtitle: "Overspeed eccentrics to build hamstring armor and transverse core power.",
                 type: "standard",
-                showMatrix: true,
                 exercises: [
                     { name: "A1. Iso Lunge w/ Curl Press", sets: "1", reps: "60s/leg", rpe: "9", rest: "None", notes: "Primer: Neuromuscular multitasking. Separate upper/lower body tasks." },
                     { name: "A2. Scap Hangs", sets: "1", reps: "60s", rpe: "8", rest: "90s", notes: "Primer: Active lat engagement. Decompress the shoulder." },
@@ -100,14 +97,13 @@
                 block: "PHASE 1: FOUNDATIONS", 
                 intent: "Cementing the basics of extreme isometrics, deceleration, and 3x2 absolute force.",
                 day: "SESSION C", 
-                title: "FIELD PREP & SPEED",
-                subtitle: "Translating gym force into on-field sprint mechanics and lateral power.",
+                title: "GYM PREP & ACCELERATION",
+                subtitle: "Translating gym force into horizontal acceleration mechanics and lateral power.",
                 type: "standard",
-                showMatrix: false,
                 exercises: [
-                    { name: "A. Broad Jumps", sets: "4", reps: "3", rpe: "MAX", rest: "60s", notes: "Power: Stick the landing silently for a full 2 seconds. Glutes engaged." },
-                    { name: "B. Lateral Skater Jumps", sets: "3", reps: "4/leg", rpe: "8", rest: "60s", notes: "Absorption: Max lateral push. Stick landing with Knees OUT." },
-                    { name: "C. Flying 10s Sprints", sets: "5", reps: "1", rpe: "MAX", rest: "2m", notes: "Max Velocity: 20m build up into 10m absolute sprint." },
+                    { name: "A. Lateral Skater Jumps", sets: "3", reps: "4/leg", rpe: "8", rest: "60s", notes: "Absorption: Max lateral push. Stick landing with Knees OUT." },
+                    { name: "B. Broad Jumps", sets: "4", reps: "3", rpe: "MAX", rest: "60s", notes: "Power: Stick the landing silently for a full 2 seconds. Glutes engaged." },
+                    { name: "C. Banded Broad Jumps", sets: "5", reps: "3", rpe: "MAX", rest: "2m", notes: "Max Velocity Gym Alternative: Explode horizontally against band. Stick the landing." },
                     { name: "D. Heavy Suitcase Carry", sets: "3", reps: "20m/side", rpe: "8", rest: "60s", notes: "Armor: Anti-lateral flexion. Keep pelvis neutral." }
                 ]
             },
@@ -123,7 +119,6 @@
                 title: "POSITION TOLERANCE",
                 subtitle: "Maximal structural tension followed by high-threshold absolute force.",
                 type: "standard",
-                showMatrix: true,
                 exercises: [
                     { name: "A1. Extreme Iso Lunge", sets: "1", reps: "2-3m/leg", rpe: "10", rest: "None", notes: "Primer: Pushing the limit. Suffer beautifully. Maintain 90 degrees." },
                     { name: "A2. Extreme Iso Push-Up", sets: "1", reps: "90s-2m", rpe: "9", rest: "2m", notes: "Primer: Max tension. Core braced, active pull into ground." },
@@ -140,7 +135,6 @@
                 title: "REBOUND & MULTITASK",
                 subtitle: "Training the 'zone of transformation' - braking directly into explosive acceleration.",
                 type: "standard",
-                showMatrix: true,
                 exercises: [
                     { name: "A. Iso Lunge w/ Curl Press", sets: "1", reps: "2m/leg", rpe: "10", rest: "2m", notes: "Primer: Brain separates upper body tasks from lower body stability." },
                     { name: "B. Drop-Catch Squats", sets: "4", reps: "5", rpe: "9", rest: "60s", notes: "Absorption: Rapid drop, absorb downward momentum instantly." },
@@ -155,13 +149,12 @@
                 intent: "Pushing isometric hold durations and building tolerance to high-volume deceleration.",
                 day: "SESSION C", 
                 title: "PEAK NEURAL TRANSFER",
-                subtitle: "Transferring eccentric brakes into pure on-field sprint mechanics.",
+                subtitle: "Transferring eccentric brakes into pure horizontal sprint mechanics.",
                 type: "standard",
-                showMatrix: false,
                 exercises: [
                     { name: "A. Scap Hangs", sets: "1", reps: "90s", rpe: "8", rest: "None", notes: "Primer: Decompress spine before plyos." },
                     { name: "B. Hurdle Hops", sets: "3", reps: "4", rpe: "MAX", rest: "60s", notes: "Transfer: Squeeze glutes to neutral pelvis on landing. Rhythm." },
-                    { name: "C. Band Resisted Sprints", sets: "5", reps: "15m", rpe: "MAX", rest: "90s", notes: "Sprint: Max intent against resistance. Drive horizontally." },
+                    { name: "C. Banded Broad Jumps", sets: "5", reps: "3", rpe: "MAX", rest: "90s", notes: "Sprint Transfer: Max horizontal intent against resistance. Stick the landing." },
                     { name: "D. Nordic Lowers", sets: "3", reps: "4", rpe: "10", rest: "60s", notes: "Armor: ACL Focus. Strict 5-second eccentric lowering." }
                 ]
             },
@@ -177,7 +170,6 @@
                 title: "POST-MATCH TRIAGE",
                 subtitle: "Parasympathetic recovery to flush the system and assess joint health after weekend collisions.",
                 type: "standard",
-                showMatrix: false,
                 exercises: [
                     { name: "A. Zone 1 Bike/Row", sets: "1", reps: "15m", rpe: "3", rest: "None", notes: "Flush the legs. Nasal breathing only." },
                     { name: "B. Extreme Iso Lunge", sets: "1", reps: "45s/leg", rpe: "6", rest: "60s", notes: "Recovery Dose: Pull inflammation out of the knee/hip joints." },
@@ -194,7 +186,6 @@
                 title: "NEURAL MAINTENANCE",
                 subtitle: "Low volume, high intensity. Waking the nervous system up without causing muscular soreness.",
                 type: "standard",
-                showMatrix: true,
                 exercises: [
                     { name: "A1. Extreme Iso Lunge", sets: "1", reps: "90s/leg", rpe: "9", rest: "None", notes: "Primer: GTO desensitization before heavy lifting." },
                     { name: "A2. Extreme Iso Push-Up", sets: "1", reps: "60s", rpe: "8", rest: "60s", notes: "Primer: Upper body stability." },
@@ -211,16 +202,14 @@
                 title: "PRE-MATCH PRIMER",
                 subtitle: "Getting fast, twitchy, and aligned 24-hours before kickoff.",
                 type: "standard",
-                showMatrix: false,
                 exercises: [
                     { name: "A. Neck Isometrics", sets: "3", reps: "15s/way", rpe: "7", rest: "None", notes: "Concussion prep. Activate the cervical spine." },
-                    { name: "B. Sprint Starts (Falling)", sets: "3", reps: "10m", rpe: "MAX", rest: "60s", notes: "Fire the CNS. Pure acceleration mechanics." },
+                    { name: "B. Banded Broad Jumps", sets: "4", reps: "3", rpe: "MAX", rest: "60s", notes: "Fire the CNS. Pure horizontal acceleration mechanics." },
                     { name: "C. Drop-Catch RDL", sets: "2", reps: "5", rpe: "7", rest: "60s", notes: "Light weight. Fast snap. Wake up the hamstrings." },
                     { name: "D. Medball Rotations", sets: "2", reps: "5/side", rpe: "MAX", rest: "60s", notes: "Activate transverse plane for tackling." }
                 ]
             }
         ];
-
 
         // --- UI COMPONENTS ---
 
@@ -244,43 +233,52 @@
 
         const V2Tracker = ({ data }) => (
             <div className="grid grid-cols-12 gap-3 mb-4">
-                {/* Status (Made Extremely Bold & Clear) */}
-                <div className="col-span-3 bg-white border-4 border-black p-3 rounded-lg shadow-md relative overflow-hidden flex flex-col justify-center">
-                    <div className="absolute top-0 left-0 w-2 h-full bg-brand-red"></div>
-                    <div className="text-[10px] font-black text-black uppercase tracking-widest mb-2 border-b-2 border-black pb-1 pl-2">01. Status Check</div>
-                    <div className="flex flex-col gap-1.5 pl-2">
-                        <label className="flex items-center gap-2 text-[10px] font-black text-green-700"><span className="print-box border-2 border-green-700"></span> GREEN (100% Load)</label>
-                        <label className="flex items-center gap-2 text-[10px] font-black text-amber-600"><span className="print-box border-2 border-amber-600"></span> AMBER (Modified)</label>
-                        <label className="flex items-center gap-2 text-[10px] font-black text-red-600"><span className="print-box border-2 border-red-600 bg-red-50"></span> RED (Rehab)</label>
+                {/* Status (Clear, Black & White for Printing) */}
+                <div className="col-span-3 bg-white print-bg-white border-[3px] border-black print-border-black p-3 rounded-lg shadow-sm relative overflow-hidden flex flex-col justify-center">
+                    <div className="text-[11px] font-black text-black print-text-black uppercase tracking-widest mb-2 border-b-2 border-black print-border-black pb-1">01. Status (Tick)</div>
+                    <div className="flex flex-col gap-2 mt-0.5">
+                        <label className="flex items-center gap-2 text-[10px] font-black text-black print-text-black leading-none">
+                            <span className="w-3.5 h-3.5 border-2 border-black print-border-black inline-block"></span> GREEN (100% Load)
+                        </label>
+                        <label className="flex items-center gap-2 text-[10px] font-black text-black print-text-black leading-none">
+                            <span className="w-3.5 h-3.5 border-2 border-black print-border-black inline-block"></span> AMBER (Modified)
+                        </label>
+                        <label className="flex items-center gap-2 text-[10px] font-black text-black print-text-black leading-none">
+                            <span className="w-3.5 h-3.5 border-2 border-black print-border-black inline-block"></span> RED (Rehab Focus)
+                        </label>
                     </div>
                 </div>
 
-                {/* Macrocycle */}
+                {/* Macrocycle - Adding Ticks for Active Months */}
                 <div className="col-span-4 bg-gray-50 border-2 border-gray-300 p-2 rounded-lg flex flex-col justify-center">
                     <div className="text-[10px] font-bold text-gray-500 uppercase tracking-widest mb-1 border-b border-gray-300 pb-1">02. Macrocycle & Day</div>
-                    <div className="flex flex-wrap gap-1.5 mt-1.5">
+                    <div className="flex flex-wrap gap-1 mt-1.5">
                         {['SEP', 'OCT', 'NOV', 'DEC', 'JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG'].map(m => {
                             const isCurrent = data.months.includes(m);
                             return (
-                                <label key={m} className={`flex items-center gap-0.5 text-[8.5px] font-bold ${isCurrent ? 'text-brand-red' : 'text-gray-400'}`}>
-                                    <span className={`print-box w-2.5 h-2.5 ${isCurrent ? 'bg-brand-red border-brand-red' : 'border-gray-300'}`}></span> {m}
+                                <label key={m} className={`flex items-center gap-1 text-[8px] font-bold ${isCurrent ? 'text-black' : 'text-gray-400'}`}>
+                                    <span className={`w-3 h-3 border border-black inline-flex items-center justify-center font-bold text-[9px] ${isCurrent ? 'bg-gray-200' : 'bg-white'}`}>
+                                        {isCurrent ? '✓' : ''}
+                                    </span> {m}
                                 </label>
                             )
                         })}
                     </div>
                     <div className="flex gap-4 mt-2 pt-1 border-t border-gray-300">
                         {['M', 'T', 'W', 'TH', 'F', 'S', 'SU'].map(d => (
-                            <label key={d} className="flex items-center gap-1 text-[10px] font-black text-black"><span className="print-box w-2.5 h-2.5 border-gray-400"></span> {d}</label>
+                            <label key={d} className="flex items-center gap-1 text-[10px] font-black text-black">
+                                <span className="w-3 h-3 border border-gray-400 inline-block bg-white"></span> {d}
+                            </label>
                         ))}
                     </div>
                 </div>
 
                 {/* Phase & Intent (Explicit & Bold) */}
-                <div className="col-span-5 bg-brand-red border-2 border-brand-red p-3 rounded-lg text-white flex flex-col justify-center shadow-md">
-                    <div className="text-[10px] font-bold text-red-200 uppercase tracking-widest mb-1 border-b border-red-800 pb-1">03. Phase & Intent</div>
+                <div className="col-span-5 bg-black border-2 border-black p-3 rounded-lg text-white flex flex-col justify-center shadow-md">
+                    <div className="text-[10px] font-bold text-gray-300 uppercase tracking-widest mb-1 border-b border-gray-600 pb-1">03. Phase & Intent</div>
                     <div className="mt-1">
-                        <div className="text-[15px] font-black tracking-widest uppercase leading-none mb-1.5">{data.block}</div>
-                        <div className="text-[10px] font-medium leading-snug text-red-50 bg-black/20 p-1.5 rounded">{data.intent}</div>
+                        <div className="text-[15px] font-black tracking-widest uppercase leading-none mb-1.5 text-brand-red">{data.block}</div>
+                        <div className="text-[10px] font-medium leading-snug text-white">{data.intent}</div>
                     </div>
                 </div>
             </div>
@@ -297,7 +295,7 @@
                         <div key={i} className="bg-white p-2 border-[0.5px] border-gray-200 flex flex-col justify-between h-full">
                             <div className="flex items-start justify-between gap-1 mb-1">
                                 <span className="text-[11px] font-bold text-black leading-tight">{ex.name}</span>
-                                <span className="print-box w-3 h-3 border-gray-400 flex-shrink-0 mt-0.5"></span>
+                                <span className="w-3 h-3 border border-gray-400 flex-shrink-0 mt-0.5"></span>
                             </div>
                             <div>
                                 <span className="text-[10px] font-black text-brand-red block mb-0.5 leading-none">{ex.reps}</span>
@@ -305,36 +303,6 @@
                             </div>
                         </div>
                     ))}
-                </div>
-            </div>
-        );
-
-        const RepRangeGuide = () => (
-            <div className="mb-3 flex flex-col gap-2">
-                <div className="flex gap-3">
-                    <div className="flex-1 border-2 border-black rounded p-2 bg-gray-50 flex items-center justify-between">
-                        <div>
-                            <div className="text-xs font-black uppercase tracking-widest text-black">🐺 The Pack / She-Wolves (Forwards)</div>
-                            <div className="text-[10px] text-gray-600 font-medium mt-0.5">Contact Dominance & Work Capacity</div>
-                        </div>
-                        <div className="text-right">
-                            <div className="text-xs font-black text-brand-red bg-red-100 px-2 py-0.5 rounded shadow-sm inline-block border border-red-200">3-5 Sets &times; 5-8 Reps</div>
-                            <div className="text-[9px] font-bold text-gray-600 mt-1">60-90s Rest (Keep HR Up)</div>
-                        </div>
-                    </div>
-                    <div className="flex-1 border-2 border-black rounded p-2 bg-gray-50 flex items-center justify-between">
-                        <div>
-                            <div className="text-xs font-black uppercase tracking-widest text-black">⚡ The Alphas / Apex Wolves (Backs)</div>
-                            <div className="text-[10px] text-gray-600 font-medium mt-0.5">Speed Merchants & Max Force</div>
-                        </div>
-                        <div className="text-right">
-                            <div className="text-xs font-black text-blue-700 bg-blue-100 px-2 py-0.5 rounded shadow-sm inline-block border border-blue-200">4-5 Sets &times; 3-5 Reps</div>
-                            <div className="text-[9px] font-bold text-gray-600 mt-1">3-5 Mins Rest (CNS Recovery)</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="text-[10px] font-bold text-brand-red bg-red-50 p-1 border border-red-100 rounded inline-block text-center">
-                    *COACH NOTE: Heavy Concentric Lifts (Deadlifts/Presses) are locked at 3x2 reps for BOTH cohorts to leverage the uninhibited nervous system post-isometrics.
                 </div>
             </div>
         );
@@ -362,16 +330,9 @@
                                     <div className="font-black text-black text-[12px] leading-tight">{ex.name}</div>
                                     <div className="text-[10px] text-brand-red font-bold leading-tight mt-1 pr-2">{ex.notes}</div>
                                 </td>
-                                <td className="p-2 text-center font-black text-[12px] align-middle">
-                                    {ex.sets === 'Matrix' ? 
-                                        <span className="text-gray-400 italic text-[10px]">See Guide</span> : 
-                                        <span>{ex.sets} &times; {ex.reps}</span>
-                                    }
-                                </td>
+                                <td className="p-2 text-center font-black text-[12px] align-middle">{ex.sets} &times; {ex.reps}</td>
                                 <td className="p-2 text-center font-black text-gray-800 text-xs align-middle bg-gray-100">{ex.rpe}</td>
-                                <td className="p-2 text-center font-bold text-gray-600 text-[11px] align-middle">
-                                    {ex.rest === 'Matrix' ? <span className="italic">See Guide</span> : ex.rest}
-                                </td>
+                                <td className="p-2 text-center font-bold text-gray-600 text-[11px] align-middle">{ex.rest}</td>
                                 <td className="p-1 border-l border-gray-300 text-center align-middle"><div className="w-5 h-5 border-2 border-gray-400 mx-auto bg-white rounded-sm"></div></td>
                                 <td className="p-1 border-l border-gray-300 text-center align-middle"><div className="w-5 h-5 border-2 border-gray-400 mx-auto bg-white rounded-sm"></div></td>
                                 <td className="p-1 border-l border-gray-300 text-center align-middle"><div className="w-5 h-5 border-2 border-gray-400 mx-auto bg-white rounded-sm"></div></td>
@@ -382,7 +343,7 @@
                             </tr>
                         ))}
                         {/* Empty spacer rows to fill out the table if needed */}
-                        {[...Array(Math.max(0, 5 - exercises.length))].map((_, i) => (
+                        {[...Array(Math.max(0, 6 - exercises.length))].map((_, i) => (
                              <tr key={`spacer-${i}`} className="bg-white border-b border-gray-100 h-10">
                                 <td className="p-2 border-r border-gray-200"></td>
                                 <td colSpan="8" className="border-r border-gray-200"></td>
@@ -408,9 +369,6 @@
 
                         <p className="text-gray-700 font-bold text-[11px] mb-3 italic">{data.subtitle}</p>
 
-                        {/* Note about 3x2 overriding the matrix for this specific phase */}
-                        {data.showMatrix && <RepRangeGuide />}
-
                         {/* Content Logic */}
                         <StandardTable exercises={data.exercises} />
                     </div>
@@ -426,32 +384,32 @@
                             </div>
                         </div>
 
-                        {/* Off-Field Conditioning Tracker */}
-                        <div className="w-56 border-2 border-black rounded-lg flex flex-col bg-white p-2 shadow-md">
+                        {/* Off-Field Conditioning Tracker (B&W Checkboxes) */}
+                        <div className="w-56 border-[3px] border-black rounded-lg flex flex-col bg-white p-2 shadow-sm">
                             <span className="text-[10px] font-black text-black uppercase tracking-widest border-b-2 border-gray-200 mb-1.5 pb-1 text-center">Off-Field Conditioning</span>
                             <p className="text-[8px] text-gray-500 text-center leading-none mb-1.5 italic">Must be completed in your own time.</p>
                             <div className="flex flex-col gap-1.5 pl-2">
-                                <label className="flex items-center gap-2 text-[10px] font-bold text-gray-800 leading-none">
-                                    <span className="print-box border-2 border-gray-400"></span> Norwegian 4x4 (Row/Bike)
+                                <label className="flex items-center gap-2 text-[10px] font-bold text-black leading-none">
+                                    <span className="w-3.5 h-3.5 border-2 border-black inline-block"></span> Norwegian 4x4 (Row/Bike)
                                 </label>
-                                <label className="flex items-center gap-2 text-[10px] font-bold text-gray-800 leading-none">
-                                    <span className="print-box border-2 border-gray-400"></span> RSA Sprints (6x 35m)
+                                <label className="flex items-center gap-2 text-[10px] font-bold text-black leading-none">
+                                    <span className="w-3.5 h-3.5 border-2 border-black inline-block"></span> RSA Sprints (6x 35m)
                                 </label>
                             </div>
                         </div>
                         
-                        {/* Wellness Check Box */}
-                        <div className="w-56 border-2 border-black rounded-lg flex flex-col bg-white p-2 shadow-md">
+                        {/* Wellness Check Box (B&W Checkboxes) */}
+                        <div className="w-56 border-[3px] border-black rounded-lg flex flex-col bg-white p-2 shadow-sm">
                             <span className="text-[10px] font-black text-black uppercase tracking-widest border-b-2 border-gray-200 mb-2 pb-1 text-center">Wellness Check (Tick One)</span>
                             <div className="flex flex-col gap-1.5 mt-0.5 pl-2">
-                                <label className="flex items-center gap-2 text-[10px] font-bold text-green-700 leading-none">
-                                    <span className="print-box border-2 border-green-700"></span> Feeling Good
+                                <label className="flex items-center gap-2 text-[10px] font-bold text-black leading-none">
+                                    <span className="w-3.5 h-3.5 border-2 border-black inline-block"></span> Feeling Good
                                 </label>
-                                <label className="flex items-center gap-2 text-[10px] font-bold text-amber-600 leading-none">
-                                    <span className="print-box border-2 border-amber-600"></span> Okay, but sore
+                                <label className="flex items-center gap-2 text-[10px] font-bold text-black leading-none">
+                                    <span className="w-3.5 h-3.5 border-2 border-black inline-block"></span> Okay, but sore
                                 </label>
-                                <label className="flex items-center gap-2 text-[10px] font-bold text-brand-red leading-none">
-                                    <span className="print-box border-2 border-brand-red"></span> Broken (See Coach)
+                                <label className="flex items-center gap-2 text-[10px] font-bold text-black leading-none">
+                                    <span className="w-3.5 h-3.5 border-2 border-black inline-block"></span> Broken (See Coach)
                                 </label>
                             </div>
                         </div>
